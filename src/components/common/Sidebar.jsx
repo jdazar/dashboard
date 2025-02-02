@@ -7,10 +7,9 @@ import { LuLineChart } from "react-icons/lu";
 import { LuLogOut } from "react-icons/lu";
 import { LuChevronLeft } from "react-icons/lu";
 
-
-import { ToggleButton } from './ToggleButton';
-
 import { GlobalContext } from '../../context/GlobalContext';
+
+import photo from '../../static/profile.png';
 
 export function Sidebar({ isSidebarOpen, setIsSidebarOpen }){
 
@@ -54,7 +53,7 @@ export function Sidebar({ isSidebarOpen, setIsSidebarOpen }){
                 <li>
                     <div className="profile-details">
                         <div className="profile-content">
-                            <img src="src\static\profile.png" alt="Foto de perfil" />
+                            <img src={photo} alt="Foto de perfil" />
                         </div>
                         <div className="profile-info">
                             <div className='profile_name'>Julián Daza</div>
@@ -65,16 +64,7 @@ export function Sidebar({ isSidebarOpen, setIsSidebarOpen }){
                     </div>
                 </li>
 
-                    
-                {/* <li>
-                    <div className='theme-options'>
-                        <ToggleButton id={'theme_toggle_btn'} onChange={toggleTheme} default_checked={(theme == 'Dark')}/>
-
-                    </div>
-                </li> */}
-
-
-
+            
             </ul>
         </div>
         
