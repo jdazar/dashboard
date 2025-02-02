@@ -28,8 +28,11 @@ export const options = {
   maintainAspectRatio: false,
   plugins: {
     legend: {
-      display: true,
-    },
+      position:'bottom',
+      labels: {
+          usePointStyle: true,
+          },
+      },
     tooltip: {
       backgroundColor: 'rgba(255, 255, 255, 1)',
       cornerRadius: '15',
@@ -45,14 +48,6 @@ export const options = {
       titleAlign: 'center',
       bodyColor: '#333',
     },
-
-    legend: {
-      position:'bottom',
-      labels: {
-          usePointStyle: true,
-          },
-      },
-
 
     zoom: {
       pan: {

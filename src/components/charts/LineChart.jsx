@@ -152,15 +152,12 @@ export function LineChart({ x, y, title, legends, height }) {
   scales:{
     x:{
         type:'linear',
-        //position:'bottom',
-        grid:{
-            display: false
-        },
         max: Math.max(x),
         ticks:{
           color:colors[theme].scales.x
         },
         grid:{
+          display: false,
           color:colors[theme].grid.x
         }
     },
