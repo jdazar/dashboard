@@ -1,0 +1,6 @@
+.content-container{
+  position: relative;
+  background-color: var(--ct-bg-color);
+  height: 100%;
+  /* transition: var(--sb-opn-cls-tran); */
+}

@@ -1,0 +1,80 @@
+
+
+#app_container[data-theme='Light']{
+    /* GENERAL */
+    --primary-color:#4963E3;
+    --base-color-dark:#212B36; /* Color del sidebar, etc*/
+  
+    /* SIDEBAR (sb) */
+    --sb-bg-color:#212B36;
+    --sb-opn-width:260px; /* Ancho del sidebar abierto*/
+    --sb-cls-width:65px; /* Ancho del sidebar cerrado*/
+    --sb-logo-color:#fff;
+    --sb-nav-icons-color:#fff;
+    --sb-nav-icons-height:20px;
+    --sb-nav-link-color:#fff;
+    --sb-nav-hover-bg-color:#28333f; /* mas oscuro: 28333f  claro: 2d3a47 */
+    --sb-subnav-bg-color:#28333f;
+    --sb-opn-cls-tran:all .2s ease; /* Transicion al abrir y cerrar el sidebar */
+  
+    /* HEADER (hd) */
+    --hd-bg-color: transparent;
+  
+    /* CONTENT (ct) */
+    --ct-bg-color: #F5F7FB;
+  
+    /* PANELES (pn) */
+    --pn-padding:22px;
+    --pn-border-radius:20px;
+    --pn-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    --pn-bg-color:#fff;
+    --pn-resize-handle:rgba(0, 0, 0, 0.2);
+
+    /* GRAFICAS (gr) */
+    --gr-font-color:#777777;
+
+    /* FUENTES */
+    --font-color:#444;
+    
+  }
+
+
+  #app_container[data-theme='Dark']{
+    /* GENERAL */
+    --primary-color:#4963E3;
+    --base-color-dark:#212B36; /* Color del sidebar, etc*/
+  
+    /* SIDEBAR (sb) */
+    --sb-bg-color:#242d36;
+    --sb-opn-width:260px; /* Ancho del sidebar abierto*/
+    --sb-cls-width:65px; /* Ancho del sidebar cerrado*/
+    --sb-logo-color:#fff;
+    --sb-nav-icons-color:#fff;
+    --sb-nav-icons-height:20px;
+    --sb-nav-link-color:#fff;
+    --sb-nav-hover-bg-color:#28333f; /* mas oscuro: 28333f  claro: 2d3a47 */
+    --sb-subnav-bg-color:#28333f;
+    --sb-opn-cls-tran:all .2s ease; /* Transicion al abrir y cerrar el sidebar */
+  
+    /* HEADER (hd) */
+    --hd-bg-color: transparent;
+  
+    /* CONTENT (ct) */
+    --ct-bg-color: #212931;
+  
+    /* PANELES (pn) */
+    --pn-padding:22px;
+    --pn-border-radius:20px;
+    --pn-shadow:0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+    --pn-bg-color:#242d36;
+    --pn-resize-handle:rgba(154, 171, 194,0.2);
+
+
+    /* GRAFICAS (gr) */
+    --gr-font-color:#9aabc2;
+
+    /* FUENTES */
+    --font-color:#b2bfd3;
+
+  }
+  

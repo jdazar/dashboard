@@ -1,0 +1,36 @@
+
+
+
+.toggle-btn{
+    background-color: #d2d2d2;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.15s ease-in-out;
+}
+
+.toggle-btn::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    margin: 2px;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.9);
+}
+
+input:checked + .toggle-btn{
+    background-color: #4963E3;
+}
+
+input:checked + .toggle-btn::before{
+    transform: translateX(20px);
+}
+
+.toggle-btn-checkbox{
+    display: none;
+}

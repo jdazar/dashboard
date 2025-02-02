@@ -1,0 +1,336 @@
+
+/* ========== GENERAL ========== */
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--sb-opn-width);
+    background-color: var(--sb-bg-color);
+    z-index: 100;
+    transition: var(--sb-opn-cls-tran);
+}
+
+.sidebar.close{
+    width: var(--sb-cls-width);
+    
+}
+
+
+/* ========== LOGO ========== */
+
+.sidebar .logo{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .logo-icon{
+    border: 2px solid #ccc;
+    color: #ccc;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    user-select: none;
+}
+
+
+/* ========== LINKS MENU ========== */
+
+.sidebar .nav-links{
+    height: calc(100% - 60px); /*  REVISAR */
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar.close .nav-links{
+    overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.sidebar .nav-links li:hover{
+    background-color: var(--sb-nav-hover-bg-color);
+    /* cursor: pointer; */
+
+}
+
+.sidebar .nav-links li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.sidebar .nav-links li svg{
+    stroke: var(--sb-nav-icons-color);
+    height: var(--sb-nav-icons-height);
+    min-width: var(--sb-cls-width);
+    line-height: 50px;
+}
+
+.sidebar .nav-links li a .link-name{
+    color:var(--sb-nav-link-color);
+    transition: all 0.3s ease;
+}
+
+.sidebar.close .nav-links li a .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links li .multi-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .multi-link{
+    display: block;
+}
+
+.sidebar .nav-links li .multi-link .arrow-icon{
+    stroke: var(--sb-nav-icons-color);
+    height: 20px;
+    min-width: 60px;
+    transition: all 0.2s ease;
+}
+
+.sidebar.close .nav-links li .multi-link .arrow-icon{
+    display: none;
+}
+
+/* ========== LINKS SUB MENU ========== */
+
+
+.sidebar .nav-links li .sub-menu{
+    padding: 6px 6px 14px var(--sb-cls-width);
+    background-color: var(--sb-subnav-bg-color);
+    display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{
+    display: block;
+}
+
+
+
+/* Girar flecha al abrir el menu */
+.sidebar .nav-links li.showMenu .multi-link .arrow-icon{
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.sidebar .nav-links li .multi-link .arrow-icon:hover{
+    cursor: pointer;
+}
+
+.sidebar .nav-links li .sub-menu a{
+    color: var(--sb-nav-link-color);
+    font-size: 0.9rem;
+    padding: 7px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+    opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 25px;
+    border-radius: 0 6px 6px 0;
+    
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    transition: 0s;
+    
+    
+}
+
+.sidebar.close .nav-links li:hover .sub-menu{
+    top:0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+/* Esconder el titulo de la ventana flotante cuando el sidebar está expandido */
+.sidebar .nav-links li .sub-menu .link-name{
+    display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link-name{
+    font-size: 1rem;
+    opacity: 1;
+    display: block;
+}
+
+/* Menu flotante de los que no son multi opcion */
+.sidebar .nav-links li .sub-menu.blank{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 0px 20px 0px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu.blank{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* SIDEBAR PROFILE */
+
+.sidebar .profile-details{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--sb-nav-hover-bg-color);
+    padding: 4px 0;
+    width: var(--sb-opn-width);
+    transition: var(--sb-opn-cls-tran);
+}
+.sidebar.close .profile-details{
+    background: none;
+}
+.sidebar.close .profile-details{
+    width: var(--sb-cls-width); 
+}
+
+.sidebar .profile-details img{
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 14px 0 calc( (var(--sb-cls-width) - 52px) / 2 );
+    padding: 5px;
+}
+
+.sidebar.close .profile-details img{
+    background-color: var(--sb-subnav-bg-color);
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+
+.sidebar .profile-details .profile-info{
+    transition: all 0.3s ease;
+  }
+
+.sidebar.close .profile-details .profile-info, .sidebar.close .profile-details svg{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .profile-details .profile_name{
+    font-size: 1.1rem;
+    color: var(--sb-nav-link-color);
+    white-space: nowrap;
+    
+}
+.sidebar .profile-details .profile_role{
+    font-size: 0.8rem;
+    color: var(--sb-nav-link-color);
+    white-space: nowrap;
+}
+
+.sidebar .profile-details .logout-btn{
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.sidebar .profile-details .logout-btn:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+/* THEME */
+
+.theme-options{
+    display: flex;
+    bottom: 0;
+}
+
+
+/*   OVERLAY    */
+
+.sidebar-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.5px);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar-overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* OPEN-CLOSE SIDE BAR BUTTON */
+.sidebar .logo .sidebar-btn{
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: calc(100% - 12px);
+    border-radius: 6px;
+    cursor: pointer;
+    stroke: var(--sb-nav-icons-color);
+    transition: left 0.2s ease;
+}
+
+.sidebar.close .logo .sidebar-btn{
+    transform: rotate(-180deg);
+}
+
+.sidebar.close .logo .sidebar-btn:hover{
+    left: calc(100% - 8px);
+}
+
+.sidebar .logo .sidebar-btn:hover{
+    left: calc(100% - 18px);
+}
+
+

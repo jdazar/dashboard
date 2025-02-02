@@ -1,0 +1,28 @@
+
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    
+}
+
+.header .sidebar-btn{
+    width: 25px;
+    height: 25px;
+}
+
+.header .sidebar-btn:hover{
+    cursor: pointer;
+}
+
+.header .header-title{
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: var(--font-color);
+}
+
+.header .header-controls{
+    display: flex;
+}

@@ -1,0 +1,71 @@
+
+.chart-menu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+ .chart-menu .chart-title{
+    font-size: 0.95rem;
+    color: var(--gr-font-color);
+}
+
+
+.chart-menu .drag-handle{
+    cursor: grab;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.chart-menu .drag-handle:hover{
+    background-color: #697f9b28;
+    
+}
+
+.chart-menu .chart-title:active{
+    cursor: grabbing;
+}
+
+
+
+
+.chart-menu .chart-menu-controls{
+    /* margin-left: auto; */
+    display: flex;
+    gap: 3px;
+    transition: 0.5s;
+    opacity: 0.1;
+    /* opacity: 1; */
+    position: absolute;
+    left: calc( 100% - 84px - var(--pn-padding) );
+}
+
+
+.chart-container:hover .chart-menu .chart-menu-controls{
+    opacity: 1;
+}
+
+.chart-menu .chart-menu-controls button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+
+.chart-menu .chart-menu-controls button:hover{
+    background-color: #697f9b44;
+
+}
+
+.chart-menu .chart-menu-controls button svg{
+    width: 18px;
+    height: 18px;
+    fill: #5a708bc4;
+}
