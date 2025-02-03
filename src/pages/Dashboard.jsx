@@ -66,7 +66,7 @@ export function Dashboard(){
           <div key="3" className="panel">
             <RadarChart 
               height={'calc(100% - 30px)'}
-              title={'Gráfico de Barras'}
+              title={'Gráfico de Radar'}
         
             />
           </div>
